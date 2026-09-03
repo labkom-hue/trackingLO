@@ -26,16 +26,13 @@
     --radius:  12px;
     --shadow:  0 2px 12px rgba(31,78,121,.10);
   }
-
   * { box-sizing:border-box; margin:0; padding:0; }
-
   body {
     font-family:'Plus Jakarta Sans', sans-serif;
     background: var(--bg);
     color: var(--text);
     min-height: 100vh;
   }
-
   /* ── HEADER ── */
   .header {
     background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
@@ -54,7 +51,6 @@
   }
   .header h1 { font-size: 18px; font-weight: 700; line-height: 1.3; }
   .header p  { font-size: 12px; opacity: .8; margin-top: 2px; }
-
   /* ── STEPS ── */
   .steps-wrap {
     background: white;
@@ -81,10 +77,8 @@
   }
   .step.active .step-n { background: var(--blue); color: white; }
   .step.done   .step-n { background: var(--green); color: white; }
-
   /* ── MAIN ── */
   .main { max-width: 780px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
-
   /* ── BANNER ── */
   .banner {
     border-radius: var(--radius); padding: 10px 14px;
@@ -100,7 +94,6 @@
   .b-err .b-dot { background:#C62828; }
   .b-chk .b-dot { background:#F57F17; animation: blink 1s infinite; }
   @keyframes blink { 0%,100%{opacity:1}50%{opacity:.25} }
-
   /* ── SECTION LABEL ── */
   .section-label {
     font-size: 11px; font-weight: 700; letter-spacing: .08em;
@@ -111,7 +104,6 @@
   .section-label::after {
     content:''; flex:1; height:1px; background: var(--sky);
   }
-
   /* ── CARD ── */
   .card {
     background: var(--card);
@@ -134,17 +126,14 @@
     display: flex; align-items: center; justify-content: center;
     font-size: 14px; flex-shrink: 0;
   }
-
   /* ── FIELDS ── */
   .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
   .grid3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; }
-
   .field { display:flex; flex-direction:column; gap:4px; }
   .field label {
     font-size: 12px; font-weight: 600; color: var(--navy);
   }
   .req { color: var(--red); margin-left:2px; }
-
   .field input,
   .field select,
   .field textarea {
@@ -171,7 +160,6 @@
   .field textarea { min-height: 72px; resize: vertical; }
   .err-msg { font-size:11px; color:var(--red); display:none; }
   .err-msg.show { display:block; }
-
   /* ── ALERT BOX ── */
   .alert-box {
     background: var(--red-l); border: 1px solid #EF9A9A;
@@ -181,7 +169,6 @@
     margin-bottom: 1rem;
   }
   .alert-box.show { display:flex; }
-
   /* ── LO ROWS ── */
   .lo-item {
     display: grid;
@@ -223,7 +210,6 @@
     transition: background .15s;
   }
   .lo-del:hover { background: #FFCDD2; }
-
   .btn-add-lo {
     display: flex; align-items: center; justify-content: center; gap: 6px;
     width: 100%; padding: 9px;
@@ -235,19 +221,16 @@
     margin-top: 4px;
   }
   .btn-add-lo:hover { background: #D6EAFF; }
-
   /* ── STATUS SELECT COLORS ── */
   select option[value="tercapai"] { color: var(--green); }
   select option[value="sebagian"] { color: var(--amber); }
   select option[value="belum"]    { color: var(--red);   }
-
   /* ── STARS ── */
   .stars { display:flex; gap:4px; }
   .star  { font-size:28px; cursor:pointer; color:#DDE6EF; transition: color .1s, transform .1s; }
   .star:hover { transform: scale(1.15); }
   .star.on { color: #F9A825; }
   .star-lbl { font-size:12px; font-weight:500; color: var(--muted); margin-left:8px; }
-
   /* ── REKAP ── */
   .stat-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-bottom:1rem; }
   .stat-card {
@@ -262,11 +245,9 @@
   .stat-card.green .stat-num  { color: var(--green); }
   .stat-card.red   .stat-num  { color: var(--red); }
   .stat-lbl  { font-size:11px; font-weight:600; color: var(--muted); margin-top:2px; }
-
   .prog-wrap { border-radius:99px; height:10px; overflow:hidden; background:var(--red-l); margin-bottom:1rem; display:flex; gap:2px; }
   .prog-tc   { background: var(--green); border-radius:99px 0 0 99px; transition:width .4s; }
   .prog-ts   { background: #FFA000; transition:width .4s; }
-
   .lo-rekap-row {
     display:flex; align-items:center; gap:10px;
     padding: 8px 0;
@@ -282,7 +263,6 @@
   .badge-t { background:var(--green-l); color:var(--green); }
   .badge-s { background:var(--amber-l); color:var(--amber); }
   .badge-b { background:var(--red-l);   color:var(--red);   }
-
   /* ── HIST ── */
   .hist-row {
     display:flex; align-items:flex-start; gap:10px;
@@ -302,17 +282,14 @@
   .pct-ok  { background:var(--green-l); color:var(--green); }
   .pct-mid { background:var(--amber-l); color:var(--amber); }
   .pct-low { background:var(--red-l);   color:var(--red);   }
-
   .empty-hist {
     text-align:center; padding:2rem 1rem;
     color:var(--muted); font-size:13px;
   }
   .empty-hist .icon { font-size:36px; margin-bottom:6px; }
-
   /* ── BUTTONS ── */
   .btn-row { display:flex; justify-content:flex-end; gap:10px; margin-top:1.25rem; }
   .btn-row.spread { justify-content:space-between; }
-
   .btn {
     padding: 10px 20px; border-radius: 8px;
     font-size: 13px; font-weight: 600;
@@ -336,11 +313,9 @@
   }
   .btn-send:hover { opacity:.9; }
   .btn-send:disabled { opacity:.45; cursor:not-allowed; }
-
   /* ── PANEL ── */
   .panel { display:none; }
   .panel.active { display:block; }
-
   /* ── RESPONSIVE ── */
   @media(max-width:540px){
     .grid2,.grid3 { grid-template-columns:1fr; }
@@ -353,7 +328,6 @@
 </style>
 </head>
 <body>
-
 <!-- HEADER -->
 <div class="header">
   <div class="header-icon">📋</div>
@@ -362,27 +336,22 @@
     <p>FK UNIDA Gontor — Medical Education Unit (MEU)</p>
   </div>
 </div>
-
 <!-- STEPS -->
 <div class="steps-wrap">
   <div class="step active" onclick="tryGo(1)" id="step1"><span class="step-n">1</span>Info sesi</div>
   <div class="step" onclick="tryGo(2)" id="step2"><span class="step-n">2</span>Capaian LO</div>
   <div class="step" onclick="tryGo(3)" id="step3"><span class="step-n">3</span>Kirim</div>
 </div>
-
 <!-- MAIN -->
 <div class="main">
-
   <!-- BANNER -->
   <div class="banner b-chk" id="banner">
     <div class="b-dot"></div>
     <span id="bmsg">Memeriksa koneksi ke Google Sheets…</span>
   </div>
-
   <!-- ═══ PANEL 1 ═══ -->
   <div class="panel active" id="p1">
     <div class="alert-box" id="a1">⚠️ <span id="a1t"></span></div>
-
     <div class="section-label">Identitas sesi</div>
     <div class="card">
       <div class="card-head"><div class="card-icon">🗓</div>Data perkuliahan</div>
@@ -439,16 +408,13 @@
         </div>
       </div>
     </div>
-
     <div class="btn-row">
       <button class="btn btn-primary" onclick="tryGo(2)">Lanjut ke Capaian LO →</button>
     </div>
   </div>
-
   <!-- ═══ PANEL 2 ═══ -->
   <div class="panel" id="p2">
     <div class="alert-box" id="a2">⚠️ <span id="a2t"></span></div>
-
     <div class="section-label">Learning outcomes</div>
     <div class="card">
       <div class="card-head"><div class="card-icon">🎯</div>Daftar LO sesi ini</div>
@@ -459,7 +425,6 @@
       <div class="err-msg" id="e-lo" style="margin:4px 0 8px;">Tambahkan minimal 1 LO dan isi teksnya.</div>
       <button class="btn-add-lo" onclick="addLO()">＋ Tambah LO</button>
     </div>
-
     <div class="section-label">Refleksi dosen</div>
     <div class="card">
       <div class="card-head"><div class="card-icon">✍️</div>Catatan & tindak lanjut</div>
@@ -487,13 +452,11 @@
         </div>
       </div>
     </div>
-
     <div class="btn-row">
       <button class="btn btn-ghost" onclick="goStep(1)">← Kembali</button>
       <button class="btn btn-primary" onclick="tryGo(3)">Lihat rekap →</button>
     </div>
   </div>
-
   <!-- ═══ PANEL 3 ═══ -->
   <div class="panel" id="p3">
     <div class="section-label">Rekap capaian</div>
@@ -501,13 +464,11 @@
       <div class="card-head"><div class="card-icon">📊</div>Ringkasan sesi</div>
       <div id="rekap"></div>
     </div>
-
     <div class="section-label">Riwayat lokal</div>
     <div class="card">
       <div class="card-head"><div class="card-icon">🕓</div>Sesi yang sudah dikirim</div>
       <div id="hist"></div>
     </div>
-
     <div class="btn-row spread">
       <button class="btn btn-ghost" onclick="goStep(2)">← Edit</button>
       <button class="btn btn-send" id="btn-send" onclick="kirim()">
@@ -515,9 +476,7 @@
       </button>
     </div>
   </div>
-
 </div><!-- /main -->
-
 <script>
 const EP = 'https://script.google.com/macros/s/AKfycbxm-cEdwOV6Oo2lfwuHbtS5gRL0heJCCItiRy--mUGTfK3kZDJb4j1VSR-YbTN8EPRIkw/exec';
 const SL = ['','Sangat rendah','Rendah','Cukup','Tinggi','Sangat tinggi'];
@@ -527,21 +486,17 @@ const SO = [
   {val:'belum',    label:'❌ Belum tercapai',  cls:'badge-b'},
 ];
 let loCount=0, starVal=0;
-
 function v(id){ return (document.getElementById(id)?.value||'').trim(); }
-
 function ce(el){
   el.classList.remove('err');
   const em=document.getElementById('e-'+el.id);
   if(em) em.classList.remove('show');
 }
-
 function setStar(n){
   starVal=n;
   document.querySelectorAll('.star').forEach(s=>s.classList.toggle('on',+s.dataset.v<=n));
   document.getElementById('slbl').textContent=SL[n];
 }
-
 function addLO(text='', status='tercapai'){
   loCount++;
   const id=loCount;
@@ -557,7 +512,6 @@ function addLO(text='', status='tercapai'){
     <button class="lo-del" onclick="document.getElementById('lo-${id}').remove()" title="Hapus LO">✕</button>`;
   document.getElementById('lo-wrap').appendChild(d);
 }
-
 function getLOs(){
   return Array.from(document.querySelectorAll('.lo-item')).map(el=>{
     const id=el.id.replace('lo-','');
@@ -565,7 +519,6 @@ function getLOs(){
             status:document.getElementById('ls-'+id)?.value||'belum'};
   }).filter(o=>o.text);
 }
-
 function validate1(){
   clearAlerts(); let errs=[];
   [['dosen','Nama dosen'],['blok','Blok/MK'],['pertemuan','Pertemuan ke-'],
@@ -582,7 +535,6 @@ function validate1(){
   }
   return true;
 }
-
 function validate2(){
   clearAlerts(); let ok=true;
   if(!getLOs().length){ document.getElementById('e-lo').classList.add('show'); ok=false; }
@@ -598,20 +550,17 @@ function validate2(){
   }
   return ok;
 }
-
 function clearAlerts(){
   document.querySelectorAll('.alert-box').forEach(a=>a.classList.remove('show'));
   document.querySelectorAll('.err').forEach(e=>e.classList.remove('err'));
   document.querySelectorAll('.err-msg').forEach(e=>e.classList.remove('show'));
 }
-
 function tryGo(n){
   if(n===2&&!validate1()) return;
   if(n===3&&!validate2()) return;
   if(n===3) buildRekap();
   goStep(n);
 }
-
 function goStep(n){
   [1,2,3].forEach(i=>{
     document.getElementById('p'+i).classList.toggle('active',i===n);
@@ -622,13 +571,11 @@ function goStep(n){
   clearAlerts();
   window.scrollTo({top:0,behavior:'smooth'});
 }
-
 function setBanner(type,msg){
   const b=document.getElementById('banner');
   b.className='banner '+(type==='ok'?'b-ok':type==='err'?'b-err':'b-chk');
   document.getElementById('bmsg').textContent=msg;
 }
-
 function buildRekap(){
   const los=getLOs();
   const total=los.length;
@@ -637,7 +584,6 @@ function buildRekap(){
   const tb=los.filter(l=>l.status==='belum').length;
   const pct=total?Math.round(tc/total*100):0;
   const sp=total?Math.round(ts/total*100):0;
-
   document.getElementById('rekap').innerHTML=`
     <div style="font-size:13px;color:var(--muted);margin-bottom:1rem;line-height:1.6;">
       <b style="color:var(--navy)">${v('dosen')}</b><br>
@@ -670,7 +616,6 @@ function buildRekap(){
     </div>`;
   renderHist();
 }
-
 async function kirim(){
   const btn=document.getElementById('btn-send');
   btn.disabled=true; btn.textContent='⏳ Mengirim…';
@@ -700,14 +645,12 @@ async function kirim(){
     btn.textContent='📤 Kirim ke Google Sheets'; btn.disabled=false;
   }
 }
-
 function saveLocal(d){
   let h=[];
   try{h=JSON.parse(localStorage.getItem('lo_fk')||'[]');}catch(e){}
   h.unshift({...d,savedAt:new Date().toISOString()});
   try{localStorage.setItem('lo_fk',JSON.stringify(h.slice(0,30)));}catch(e){}
 }
-
 function renderHist(){
   let h=[];
   try{h=JSON.parse(localStorage.getItem('lo_fk')||'[]');}catch(e){}
@@ -738,7 +681,6 @@ function renderHist(){
     </div>`;
   }).join('')+(h.length>5?`<div style="text-align:center;padding:.75rem;font-size:12px;color:var(--muted);">+${h.length-5} sesi lainnya tersimpan</div>`:'');
 }
-
 function resetForm(){
   ['dosen','blok','pertemuan','tanggal','metode','topik','hadir','durasi','hambatan','rtl']
     .forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
@@ -749,7 +691,6 @@ function resetForm(){
   document.getElementById('slbl').textContent='belum dinilai';
   clearAlerts();
 }
-
 document.addEventListener('DOMContentLoaded',()=>{
   document.getElementById('tanggal').value=new Date().toISOString().slice(0,10);
   addLO();
